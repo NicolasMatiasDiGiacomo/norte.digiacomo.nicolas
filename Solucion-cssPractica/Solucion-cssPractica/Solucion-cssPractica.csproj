@@ -123,6 +123,7 @@
     <Compile Include="Controllers\ComoSeUsa1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Selectores1Controller.cs" />
+    <Compile Include="Controllers\Selectores2Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,6 +168,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ComoSeUsa1\ComoSeUsa1.cshtml" />
     <Content Include="Views\Selectores1\Selectores1.cshtml" />
+    <Content Include="Views\Selectores2\Selectores2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
