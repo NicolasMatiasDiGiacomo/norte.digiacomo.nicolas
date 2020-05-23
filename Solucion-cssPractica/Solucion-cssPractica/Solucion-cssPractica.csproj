@@ -137,6 +137,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\estiloMaquetacion.css" />
     <Content Include="Content\miSitio.css" />
+    <Content Include="Content\siteInfo.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -173,6 +174,7 @@
     <Content Include="Views\Selectores2\Selectores2.cshtml" />
     <Content Include="Views\MaquetacionDiseñoElastico\MaquetacionDiseñoElastico.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,39 +2,62 @@
 @{
     ViewBag.Title = "Producto";
 }
-<hr style="width:95% auto; align-content:center;" />
-<input id="btnListar" type="button" value="Listar" onclick="listarValores()" />
-<hr style="width:95% auto; align-content:center;" />
-<input id="btnListarWhile" type="button" value="Listar" onclick="listarValoresWhile()" />
-<hr style="width:95% auto; align-content:center;" />
-<span id="spDatos">
+<h2>Gestión de Productos</h2>
+<hr />
+<div>
+    <table border="0">
+        <tr>
+            <th>Código</th>
+            <td>
+                <input id="txtCodigo" type="number" placeholder="Ingrese código del producto" />
+            </td>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>
+                <input id="txtNombre" type="text" placeholder="Max. de caracteres 10." />
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                <input id="btnSave" type="button" value="Grabar" class="button-success color-success" />
+                <input id="btnList" type="button" value="Listar productos" class="button-default color-default" />
+            </td>
+        </tr>
+    </table>
+</div>
+<hr />
+<div id="resultado">
 
-</span>
+</div>
 
-@section scripts {
+@section scripts{
     <script>
-        var vector = [2, 4, 6, 9, 15, 17];
-        var strDatos = ""
-        function listarValores() {
-            for (var i = 0; i < vector.length; i++) {
-                strDatos += vector[i] + "<br/>";
-            }
-            var ctlSpan = document.getElementById("spDatos");
-            ctlSpan.innerHTML = strDatos;
-            strDatos = ""
+        var productos = new Array();
+        function Producto() {
+            this.setCodigo = function (value) { this._codigo = value; }
+            this.getCodigo = function () { return this._codigo; }
+            this.setNombre = function (value) { this._nombre = value; }
+            this.getNombre = function () { return this._nombre; }
         }
+        
+        $("#btnSave").click(function () {
+            var pro = new Producto();
+            pro.setCodigo($("#txtCodigo").val());
+            pro.setNombre($("#txtNombre").val());
+            productos.push(pro);
+            $("#txtCodigo").val("");
+            $("#txtNombre").val("");
+        });
 
-        function listarValoresWhile() {
-            var x = 0;
-            var i = 10;
-            i = parseInt(window.prompt("Ingrese el valor maximo", 0));
-            while (x < i) {
-                strDatos += x + "<br/>";
-                x++;
-            }
-            var ctlSpan = document.getElementById("spDatos");
-            ctlSpan.innerHTML = strDatos;
-            strDatos = ""
-        }
+        $("#btnList").click(function () {
+            var ctl = $("#resultado");
+            ctl.html("");
+            $.each(productos, function (i, e) {
+                ctl.append("Codigo: " + e.getCodigo() + " - " + "Nombre: " + e.getNombre() + "<br />");
+            });
+        });
     </script>
+
 }

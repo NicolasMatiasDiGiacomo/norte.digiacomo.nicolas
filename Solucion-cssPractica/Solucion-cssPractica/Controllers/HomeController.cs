@@ -33,5 +33,10 @@ namespace Solucion_cssPractica.Controllers
 
             return View();
         }
+
+        public ActionResult Info()
+        {
+            return View();
+        }
     }
 }

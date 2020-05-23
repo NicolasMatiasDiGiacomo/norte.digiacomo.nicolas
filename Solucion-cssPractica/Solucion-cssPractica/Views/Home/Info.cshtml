@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Info";
+}
+<link href="~/Content/siteInfo.css" rel="stylesheet" />
+<h2>Info</h2>
+<p>
+    1.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<hr />
+<p>
+    2.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+<hr />
+<p>
+    3.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+<br />
+<button id="btnCambiarColor" class="button-success color-success">Cambiar color</button>
+<button id="btnDefault" type="button" class="button-default color-default">Default</button>
+
+<hr />
+
+<input id="btnHide" type="button" value="Ocultar Aside" class="button-default color-default" />
+
+@section scripts
+{
+    <script>
+        $("#btnCambiarColor").click(function () {
+            $("p").addClass("color-success");
+        });
+        $("#btnDefault").click(function () { $("p").removeClass("color-success") });
+        $("#btnHide").click(function () {
+            $("#btnHide").val() == "Ocultar Aside" ?
+                ($("#pub").hide(), $("#btnHide").val("Mostrar Aside")) :
+                ($("#pub").show(), $("#btnHide").val("Ocultar Aside"))
+        });
+    </script>
+
+}

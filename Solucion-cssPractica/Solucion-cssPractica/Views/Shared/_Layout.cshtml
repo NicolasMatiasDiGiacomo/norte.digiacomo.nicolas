@@ -24,12 +24,23 @@
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Java", "Product", "Home")</li>
+                    <li>@Html.ActionLink("Producto", "Product", "Home")</li>
+                    <li>@Html.ActionLink("Info", "Info", "Home")</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
+        <aside id="pub">
+            <article>
+                <div>
+                    <h3>Titulo</h3>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                    </p>
+                </div>
+            </article>
+        </aside>
         @RenderBody()
         <hr />
         <footer style="clear:both;">
