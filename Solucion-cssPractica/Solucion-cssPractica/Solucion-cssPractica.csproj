@@ -172,6 +172,7 @@
     <Content Include="Views\Selectores1\Selectores1.cshtml" />
     <Content Include="Views\Selectores2\Selectores2.cshtml" />
     <Content Include="Views\MaquetacionDiseñoElastico\MaquetacionDiseñoElastico.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Producto";
+}
+<hr style="width:95% auto; align-content:center;" />
+<input id="btnListar" type="button" value="Listar" onclick="listarValores()" />
+<hr style="width:95% auto; align-content:center;" />
+<input id="btnListarWhile" type="button" value="Listar" onclick="listarValoresWhile()" />
+<hr style="width:95% auto; align-content:center;" />
+<span id="spDatos">
+
+</span>
+
+@section scripts {
+    <script>
+        var vector = [2, 4, 6, 9, 15, 17];
+        var strDatos = ""
+        function listarValores() {
+            for (var i = 0; i < vector.length; i++) {
+                strDatos += vector[i] + "<br/>";
+            }
+            var ctlSpan = document.getElementById("spDatos");
+            ctlSpan.innerHTML = strDatos;
+            strDatos = ""
+        }
+
+        function listarValoresWhile() {
+            var x = 0;
+            var i = 10;
+            i = parseInt(window.prompt("Ingrese el valor maximo", 0));
+            while (x < i) {
+                strDatos += x + "<br/>";
+                x++;
+            }
+            var ctlSpan = document.getElementById("spDatos");
+            ctlSpan.innerHTML = strDatos;
+            strDatos = ""
+        }
+    </script>
+}
